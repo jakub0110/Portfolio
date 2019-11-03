@@ -1,0 +1,213 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext');
+
+ /*
+
+ colors:
+    rgb(250, 237, 37);- złoty;
+    rgb(135, 194, 50); - zielony;
+    
+*/
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     font-family: 'Roboto', sans-serif;
+     font-size: 10px;
+ }
+
+ body {
+     /*     background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);*/
+     background-image: linear-gradient(to right, #b92b27, #1565c0);
+     text-align: center;
+     color: rgb(250, 237, 37);
+
+ }
+
+ .box {
+     position: relative;
+     width: 100%;
+     height: 5px;
+     background-color: royalblue;
+     animation-name: loading;
+     animation-duration: 4s;
+     animation-delay: 0.2s;
+ }
+
+ @keyframes loading {
+     0% {
+         width: 2vw;
+     }
+
+     50% {
+         width: 50vw;
+         background-color: orangered;
+
+     }
+
+     100% {
+         width: 100vw;
+     }
+
+ }
+
+ /* Flexbox */
+
+ .wrapper {
+     max-width: 1440px;
+     padding: 50px;
+ }
+
+ /* Flexbox container */
+ .flex-nav ul {
+     display: flex;
+     width: 100%;
+     padding: 5px;
+     margin: 0;
+ }
+
+ /*Flexbox-items*/
+ .flex-nav li {
+
+     list-style: none;
+     flex: 1;
+     border: 1px solid #0189b7;
+     border-bottom: 2px solid transparent;
+     background-image: linear-gradient(to right, #268da3, #4abde3);
+     transition: 0.2s;
+ }
+
+ @media all and (max-width: 800px) {
+     .flex-nav ul {
+         flex-wrap: wrap;
+     }
+
+     .flex-nav li {
+         flex: 1 1 50%;
+     }
+ }
+
+ @media all and (max-width: 500px) {
+     .flex-nav ul {
+         flex-wrap: wrap;
+     }
+
+     .flex-nav li {
+         flex-basis: 100%;
+     }
+ }
+
+ li a {
+     font-size: 1.4rem;
+     font-weight: bold;
+     text-decoration: none;
+     color: rgb(250, 237, 37);
+     transition: 0.2s;
+
+ }
+
+
+ li:hover {
+     background-color: rgb(26, 40, 199);
+     border-bottom: 2px solid rgb(250, 237, 37);
+ }
+
+ li a:hover {
+
+     color: rgb(250, 237, 37);
+     text-decoration: none;
+ }
+
+
+ /* Bootstrap */
+ header {
+
+     background-image: url(images/witajswiecie.JPG);
+     background-size: cover;
+     height: 40vh;
+     transition: 1.5s;
+     margin-bottom: 20px;
+ }
+
+ header h1 {
+     font-size: 5rem;
+     line-height: 20vh;
+     letter-spacing: 1px;
+     max-height: 100%;
+     transition: 0.2s;
+
+ }
+
+
+ @media all and (max-width: 768px) {
+     header {
+         background-image: url(images/hello-world2.png);
+     }
+
+     header h1 {
+         font-size: 3rem;
+     }
+ }
+
+ .sectionDescrip {
+     width: 100%;
+     margin: 10px 0;
+     border-top: 3px solid rgb(250, 237, 37);
+     border-bottom: 3px solid rgb(250, 237, 37);
+     text-align: center;
+     font-size: 1.8rem;
+     font-weight: 800;
+     letter-spacing: 2px;
+ }
+
+
+ img {
+     width: 100%;
+     max-width: 300px;
+     height: 100%;
+     max-height: 300px;
+     transition: 0.2s;
+ }
+
+
+ figure {
+     transition: 0.2s;
+ }
+
+ figure img:hover {
+     transform: scale(0.95);
+     border: 2px solid rgb(250, 237, 37);
+     opacity: 0.95;
+ }
+
+ figcaption {
+     font-size: 1.6rem;
+     font-weight: 700;
+     letter-spacing: 2px;
+ }
+
+ @media all and (max-width:500px) {
+     figcaption {
+         margin: 20px auto;
+     }
+
+ }
+
+ /*footer*/
+ footer {
+     max-height: 2vh;
+
+ }
+
+ footer p a {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ footer a:hover {
+     color: inherit;
+     border-bottom: 1px solid inherit;
+ }
